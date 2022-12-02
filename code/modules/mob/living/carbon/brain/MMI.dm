@@ -66,6 +66,7 @@
 		brainmob.loc = src
 		brainmob.container = src
 		brainmob.set_stat(CONSCIOUS)
+		brainmob.blinded = 0 //VOREedit Give them back their vision
 		dead_mob_list -= brainmob//Update dem lists
 		living_mob_list += brainmob
 
@@ -209,7 +210,7 @@
 				. += "<span class='deadsay'>It appears to be completely inactive.</span>"
 	else
 		. += "<span class='deadsay'>It appears to be completely inactive.</span>"
-		
+
 /obj/item/device/mmi/digital/emp_act(severity)
 	if(!src.brainmob)
 		return
